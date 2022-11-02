@@ -1,0 +1,2 @@
+export BASE_URL="https://cartoonbank.com/search?p_p_id=listenersearchresults_WAR_searchportlet&p_p_state=pop_up&_listenersearchresults_WAR_searchportlet_struts.portlet.action=/view/showDetailPopup&_listenersearchresults_WAR_searchportlet_tagId=cncartoons"
+cat /data/new-yorker/inds.txt | xargs -P 64 -I {} wget -O /data/new-yorker/raw-html/{}.html ${BASE_URL}{} -o /data/new-yorker/wget-logs/{}.log
